@@ -114,6 +114,7 @@
         .project-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
         .project-number { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); }
         .project-status { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; background: var(--status-bg); color: var(--status-text); border: 1px solid var(--status-border); }
+        .project-status.in-dev { background: rgba(0,229,160,0.08); color: var(--accent-primary); border-color: rgba(0,229,160,0.2); }
         .project-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.5px; }
         .project-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem; }
         .project-tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -124,6 +125,8 @@
         .project-visual .cmd { color: var(--accent-primary); }
         .project-visual .flag { color: var(--accent-secondary); }
         .project-visual .comment { color: var(--text-muted); opacity: 0.6; }
+        .project-github-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-primary); border: 1px solid rgba(0,229,160,0.25); padding: 6px 14px; border-radius: 100px; margin-bottom: 1.25rem; transition: all 0.2s ease; }
+        .project-github-link:hover { background: var(--accent-glow); color: var(--accent-primary); }
 
         /* SKILLS */
         .skills { padding: 100px 0; }
@@ -225,8 +228,8 @@
                 <p class="hero-name">Anthony LaSalle</p>
                 <h1>Defending enterprises through <span class="accent">governance, architecture, &amp; automation.</span></h1>
                 <p class="hero-subtitle">
-                    U.S. Marine and cybersecurity professional specializing in risk management, 
-                    compliance frameworks, cloud security architecture, and security automation. 
+                    U.S. Marine and cybersecurity professional specializing in risk management,
+                    compliance frameworks, cloud security architecture, and security automation.
                     Building the bridge between policy and production.
                 </p>
                 <div class="hero-actions">
@@ -239,7 +242,7 @@
                         <p>Active Duty &bull; Cpl (E-4)</p>
                     </div>
                     <div class="hero-stat">
-                        <h3>6</h3>
+                        <h3>8</h3>
                         <p>Portfolio Projects</p>
                     </div>
                     <div class="hero-stat">
@@ -260,24 +263,24 @@
             <div class="about-grid">
                 <div class="about-text reveal">
                     <p>
-                        I am an active-duty <strong>United States Marine, Corporal (E-4)</strong>, serving 
-                        as an S-6 Maintenance Chief. My military career has built a foundation in 
-                        operational security, communications systems maintenance, and the kind of 
-                        structured, detail-driven thinking that translates directly into cybersecurity 
+                        I am an active-duty <strong>United States Marine, Corporal (E-4)</strong>, serving
+                        as an S-6 Maintenance Chief. My military career has built a foundation in
+                        operational security, communications systems maintenance, and the kind of
+                        structured, detail-driven thinking that translates directly into cybersecurity
                         governance and engineering work.
                     </p>
                     <p>
-                        My professional focus sits at the intersection of <strong>GRC (Governance, Risk, 
-                        and Compliance)</strong> and <strong>hands-on security engineering</strong>. I do not 
-                        just write policies &mdash; I aim to understand how to implement and enforce them 
-                        through cloud architecture, SIEM deployment, and security automation. This hybrid 
+                        My professional focus sits at the intersection of <strong>GRC (Governance, Risk,
+                        and Compliance)</strong> and <strong>hands-on security engineering</strong>. I do not
+                        just write policies &mdash; I aim to understand how to implement and enforce them
+                        through cloud architecture, SIEM deployment, and security automation. This hybrid
                         approach is how I believe modern security teams should operate.
                     </p>
                     <p>
-                        I am currently pursuing a <strong>B.S. in Cybersecurity</strong> at American Military 
-                        University while on active duty, stacking industry certifications, and building a 
-                        portfolio of applied security projects. My target is a <strong>SkillBridge transition 
-                        in April 2027</strong>, aimed at remote GRC engineering, security architecture, or 
+                        I am currently pursuing a <strong>B.S. in Cybersecurity</strong> at American Military
+                        University while on active duty, stacking industry certifications, and building a
+                        portfolio of applied security projects. My target is a <strong>SkillBridge transition
+                        in April 2027</strong>, aimed at remote GRC engineering, security architecture, or
                         security automation roles.
                     </p>
                 </div>
@@ -317,26 +320,31 @@
                 <span class="section-label">Projects</span>
                 <h2 class="section-title">Applied security,<br>documented.</h2>
                 <p class="section-description">
-                    Hands-on projects spanning risk assessment, cloud governance, threat modeling, 
-                    and incident response. Each project applies real frameworks to realistic 
-                    scenarios with full documentation of methodology, tools, and findings.
+                    Hands-on projects spanning homelab infrastructure, risk assessment, cloud governance,
+                    detection engineering, and security automation. Every project is fully documented
+                    with architecture diagrams, methodology write-ups, and working code on GitHub.
                 </p>
             </div>
             <div class="projects-grid">
+
+                <!-- PROJECT 01 — FEATURED -->
                 <div class="project-card featured reveal">
                     <div class="project-header">
                         <span class="project-number">01 &mdash; Featured Project</span>
-                        <span class="project-status">In Development</span>
+                        <span class="project-status in-dev">In Development</span>
                     </div>
                     <div>
                         <h3>Enterprise Security Homelab</h3>
                         <p>
-                            A fully documented home laboratory simulating enterprise network security 
-                            operations. Features a pfSense firewall with VLAN segmentation, Splunk SIEM 
-                            for log ingestion and correlation-based alerting, and Kali Linux for controlled 
-                            vulnerability assessment. Designed to mirror a small SOC with real-time 
-                            monitoring, detection rules, and incident response workflows.
+                            A fully documented home laboratory simulating enterprise network security
+                            operations. Features a pfSense firewall with VLAN segmentation, Splunk SIEM
+                            for log ingestion and correlation-based alerting, and Kali Linux for controlled
+                            vulnerability assessment. Designed to mirror a small SOC environment with
+                            real-time monitoring, detection rules, and incident response workflows.
                         </p>
+                        <a href="https://github.com/Alasall0/pfsense-log-parser" target="_blank" rel="noopener" class="project-github-link">
+                            &#128187; pfSense Log Parser &rarr;
+                        </a>
                         <div class="project-tags">
                             <span class="project-tag">pfSense</span>
                             <span class="project-tag">Splunk SIEM</span>
@@ -354,22 +362,23 @@
                         &nbsp;&nbsp;| <span class="flag">where</span> action="failure"<br>
                         &nbsp;&nbsp;| <span class="flag">stats</span> count by src_ip<br>
                         &nbsp;&nbsp;| <span class="flag">sort</span> -count<br><br>
-                        <span class="comment"># pfSense firewall rule audit</span><br>
-                        <span class="cmd">$</span> pfctl <span class="flag">-sr</span> | grep block
+                        <span class="comment"># pfSense log parser output</span><br>
+                        <span class="cmd">$</span> python3 <span class="flag">log_parser.py</span> pfsense.log
                     </div>
                 </div>
 
+                <!-- PROJECT 02 -->
                 <div class="project-card reveal">
                     <div class="project-header">
                         <span class="project-number">02</span>
-                        <span class="project-status">In Development</span>
+                        <span class="project-status">Planned</span>
                     </div>
                     <h3>Risk Assessment Report</h3>
                     <p>
-                        Comprehensive risk assessment following the NIST Risk Management Framework 
-                        for a simulated mid-size enterprise. Covers asset identification, threat 
-                        analysis, vulnerability mapping, quantitative risk scoring, and a prioritized 
-                        mitigation roadmap with cost-benefit analysis for executive stakeholders.
+                        Comprehensive risk assessment following the NIST Risk Management Framework
+                        for a simulated mid-size enterprise. Covers asset identification, threat
+                        analysis, vulnerability mapping, quantitative risk scoring, and a prioritized
+                        mitigation roadmap with cost-benefit analysis formatted for executive stakeholders.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">NIST RMF</span>
@@ -379,16 +388,17 @@
                     </div>
                 </div>
 
+                <!-- PROJECT 03 -->
                 <div class="project-card reveal">
                     <div class="project-header">
                         <span class="project-number">03</span>
-                        <span class="project-status">In Development</span>
+                        <span class="project-status">Planned</span>
                     </div>
                     <h3>Cloud Governance Framework</h3>
                     <p>
-                        An AWS-focused cloud governance framework covering IAM policy design, 
-                        security group configurations, encryption standards, CloudTrail logging, 
-                        and compliance mapping to FedRAMP and NIST 800-53 controls. Includes both 
+                        An AWS-focused cloud governance framework covering IAM policy design,
+                        security group configurations, encryption standards, CloudTrail logging,
+                        and compliance mapping to FedRAMP and NIST 800-53 controls. Includes both
                         policy documentation and practical implementation guidance.
                     </p>
                     <div class="project-tags">
@@ -400,16 +410,40 @@
                     </div>
                 </div>
 
+                <!-- PROJECT 04 -->
                 <div class="project-card reveal">
                     <div class="project-header">
                         <span class="project-number">04</span>
-                        <span class="project-status">In Development</span>
+                        <span class="project-status">Planned</span>
+                    </div>
+                    <h3>Detection Engineering Lab</h3>
+                    <p>
+                        Homelab v2 — Wazuh IDS and Suricata deployed alongside Splunk, feeding
+                        real-time alerts into the SIEM. Includes custom detection rules triggered
+                        by attacks against DVWA and OWASP Juice Shop, a full architecture diagram,
+                        and documented alert tuning methodology.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Wazuh</span>
+                        <span class="project-tag">Suricata</span>
+                        <span class="project-tag">Splunk</span>
+                        <span class="project-tag">Detection Rules</span>
+                        <span class="project-tag">DVWA</span>
+                        <span class="project-tag">Alert Tuning</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 05 -->
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <span class="project-number">05</span>
+                        <span class="project-status">Planned</span>
                     </div>
                     <h3>Zero Trust Architecture Design</h3>
                     <p>
-                        A detailed zero trust architecture proposal for a hybrid enterprise 
-                        environment. Covers micro-segmentation strategy, identity-centric access 
-                        controls, continuous verification workflows, and least-privilege enforcement 
+                        A detailed zero trust architecture proposal for a hybrid enterprise
+                        environment. Covers micro-segmentation strategy, identity-centric access
+                        controls, continuous verification workflows, and least-privilege enforcement
                         aligned with CISA's Zero Trust Maturity Model.
                     </p>
                     <div class="project-tags">
@@ -420,37 +454,45 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal">
-                    <div class="project-header">
-                        <span class="project-number">05</span>
-                        <span class="project-status">In Development</span>
-                    </div>
-                    <h3>STRIDE Threat Modeling</h3>
-                    <p>
-                        Applied STRIDE methodology to decompose and model threats against a 
-                        web application architecture. Includes data flow diagrams, trust boundary 
-                        identification, threat enumeration by category, and countermeasure mapping 
-                        to MITRE ATT&CK techniques.
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag">STRIDE</span>
-                        <span class="project-tag">MITRE ATT&CK</span>
-                        <span class="project-tag">Data Flow Diagrams</span>
-                        <span class="project-tag">Threat Modeling</span>
-                    </div>
-                </div>
-
+                <!-- PROJECT 06 -->
                 <div class="project-card reveal">
                     <div class="project-header">
                         <span class="project-number">06</span>
-                        <span class="project-status">In Development</span>
+                        <span class="project-status in-dev">In Development</span>
+                    </div>
+                    <h3>Python Security Automation Suite</h3>
+                    <p>
+                        A growing collection of security automation scripts targeting real GRC
+                        and SOC workflows — pfSense log parsing, Nmap output analysis, NIST
+                        compliance checking, AWS security group auditing, IAM policy analysis,
+                        Splunk alert digests, and threat intel IOC lookups. All scripts documented
+                        with READMEs and pushed to GitHub.
+                    </p>
+                    <a href="https://github.com/Alasall0/pfsense-log-parser" target="_blank" rel="noopener" class="project-github-link">
+                        &#128187; View on GitHub &rarr;
+                    </a>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Log Parsing</span>
+                        <span class="project-tag">AWS Auditing</span>
+                        <span class="project-tag">NIST Automation</span>
+                        <span class="project-tag">Threat Intel</span>
+                        <span class="project-tag">Splunk API</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 07 -->
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <span class="project-number">07</span>
+                        <span class="project-status">Planned</span>
                     </div>
                     <h3>Ransomware Incident Simulation</h3>
                     <p>
-                        End-to-end ransomware incident response simulation covering initial 
-                        detection via Splunk correlation rules, containment procedures, forensic 
-                        artifact collection, eradication, and a full post-incident report with 
-                        lessons learned and playbook updates.
+                        End-to-end ransomware incident response simulation covering initial
+                        detection via Splunk correlation rules, containment procedures, forensic
+                        artifact collection, eradication, and a full post-incident report with
+                        lessons learned and updated IR playbook.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Incident Response</span>
@@ -459,6 +501,29 @@
                         <span class="project-tag">IR Playbook</span>
                     </div>
                 </div>
+
+                <!-- PROJECT 08 -->
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <span class="project-number">08</span>
+                        <span class="project-status">Planned</span>
+                    </div>
+                    <h3>Security Program Roadmap</h3>
+                    <p>
+                        A client-facing security program roadmap formatted as a professional
+                        consulting deliverable. Covers phased implementation timelines, maturity
+                        model progression, KPIs, budget estimates, and executive-level risk
+                        communication — demonstrating the ability to translate security strategy
+                        into business language.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">GRC Strategy</span>
+                        <span class="project-tag">Maturity Model</span>
+                        <span class="project-tag">Executive Communication</span>
+                        <span class="project-tag">Risk Roadmap</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -469,7 +534,7 @@
                 <span class="section-label">Technical Skills</span>
                 <h2 class="section-title">Tools of the trade.</h2>
                 <p class="section-description">
-                    Skills I can speak to today. This list grows with every project, 
+                    Skills I can speak to today. This list grows with every project,
                     course, and lab I complete.
                 </p>
             </div>
@@ -508,10 +573,11 @@
                     <div class="skill-items">
                         <span class="skill-item">Splunk SIEM</span>
                         <span class="skill-item">pfSense</span>
+                        <span class="skill-item">Wazuh</span>
+                        <span class="skill-item">Suricata</span>
                         <span class="skill-item">Wireshark</span>
                         <span class="skill-item">Nmap</span>
                         <span class="skill-item">Kali Linux</span>
-                        <span class="skill-item">Vulnerability Scanning</span>
                         <span class="skill-item">Log Analysis</span>
                     </div>
                 </div>
@@ -561,7 +627,7 @@
                 <span class="section-label">Certifications</span>
                 <h2 class="section-title">Credentials in<br>progress.</h2>
                 <p class="section-description">
-                    Actively stacking industry certifications aligned with GRC, cloud 
+                    Actively stacking industry certifications aligned with GRC, cloud
                     security, and enterprise defense roles.
                 </p>
             </div>
@@ -586,6 +652,11 @@
                     <h3>Splunk Core Certified User</h3>
                     <span class="cert-org">Splunk</span>
                 </div>
+                <div class="cert-item upcoming">
+                    <span class="cert-status planned">&#9675; Planned</span>
+                    <h3>CompTIA CySA+ (CS0-003)</h3>
+                    <span class="cert-org">CompTIA</span>
+                </div>
             </div>
         </div>
     </section>
@@ -602,9 +673,9 @@
                     <div class="edu-school">American Military University (AMU)</div>
                     <div class="edu-date">In Progress &mdash; Expected 2027</div>
                     <p>
-                        Coursework includes database security, information systems management, 
-                        network defense, digital forensics, and security policy development. 
-                        Completing degree while on active duty, averaging 2&ndash;3 courses 
+                        Coursework includes database security, information systems management,
+                        network defense, digital forensics, and security policy development.
+                        Completing degree while on active duty, averaging 2&ndash;3 courses
                         per quarter alongside certification preparation and portfolio work.
                     </p>
                 </div>
@@ -613,9 +684,9 @@
                     <div class="edu-school">United States Marine Corps</div>
                     <div class="edu-date">Active Duty &mdash; Enlisted Sept 2022</div>
                     <p>
-                        S-6 Maintenance Chief pipeline including communications systems 
-                        maintenance, COMSEC operations, GCSS-MC logistics systems, operational 
-                        security, and classified information handling. Led unit preparation 
+                        S-6 Maintenance Chief pipeline including communications systems
+                        maintenance, COMSEC operations, GCSS-MC logistics systems, operational
+                        security, and classified information handling. Led unit preparation
                         for FSMAO inspection.
                     </p>
                 </div>
@@ -629,8 +700,8 @@
                 <span class="section-label" style="justify-content: center;">Get In Touch</span>
                 <h2>Let's build something<br>secure together.</h2>
                 <p>
-                    Seeking SkillBridge placements and full-time remote roles in GRC 
-                    engineering, security architecture, and security automation. 
+                    Seeking SkillBridge placements and full-time remote roles in GRC
+                    engineering, security architecture, and security automation.
                     Available for SkillBridge starting April 2027.
                 </p>
                 <div class="contact-links">
@@ -642,6 +713,9 @@
                     </a>
                     <a href="https://github.com/Alasall0" target="_blank" rel="noopener" class="contact-link">
                         &#128187;&ensp;GitHub
+                    </a>
+                    <a href="./Anthony_LaSalle_Resume.pdf" download class="contact-link">
+                        &#128196;&ensp;Resume (PDF)
                     </a>
                 </div>
             </div>
